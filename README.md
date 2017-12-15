@@ -32,7 +32,7 @@ Example: `/abc/` is simple and `/Chapter(\d+)\.\d*/` is special.
 2. Special characters. For example: `/ab*c/` matches any character combination where single a is followed by 0 or more b’s (`*` means 0 or more). Will match `“cbbabbbbcdefg”` and `“abbc”`
 
 
-Here are some list of special characters in regex ([source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)). Don’t try to memorize them all. Know your limit. I can’t memorize them all in one day. I would suggest reading 3-5 per day and practice them until you nail it down. Then move on to the next set of 3-5. 
+Here are some list of special characters in regex ([source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)). Don’t try to memorize them all. Know your limit. I can’t memorize them all in one day. I would suggest reading 3-5 per day and practice them until you nail it down. Then move on to the next set of 3-5.
 
 Let’s start learning. There are about 30+ special characters. They are all pretty easy. Let’s look at the first 6. The information builds up over time, so make sure we are well-acquainted with all special characters we have seen so far. We will use `.match()` function on our examples.
 
@@ -292,23 +292,3 @@ It matches for **non**-character set. Opposite of the pattern above.
 "abcde".match(/[^a-e]/)           //=> null
 "abcdefg".match(/[^a-e]/)         //=> ["f"]
 ```
-
------
-
-### More special characters
-
-There are a few handy shortcuts worth remembering:
-
-#### \w
-
-#### \W
-
-#### \d
-
-#### \D
-
-#### \s
-
-#### \S
-
-#### \b
