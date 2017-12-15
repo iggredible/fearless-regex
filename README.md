@@ -179,7 +179,7 @@ The parentheses matches everything inside (for example, (x) matches x) and remem
 
 'bar foo'.replace(/(...) (...)/, '$2 $1')       //=> 'foo bar'
 'bar foo'.replace(/(...) (...)/, 'what')        //=> 'what'
-'bar foo'.replace(/(...)/, 'what')              //=> 'what'
+'bar foo'.replace(/(...)/, 'what')              //=> 'what foo'
 'bar foo'.replace(/(...) (what)/, '$2 $1')      //=> 'bar foo'
 'bar foo what'.replace(/(...) (what)/, '$2 $1') //=> 'bar what foo'
 ```
