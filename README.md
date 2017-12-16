@@ -32,7 +32,7 @@ Example: `/abc/` is simple and `/Chapter(\d+)\.\d*/` is special.
 2. Special characters. For example: `/ab*c/` matches any character combination where single a is followed by 0 or more b’s (`*` means 0 or more). Will match `“cbbabbbbcdefg”` and `“abbc”`
 
 
-Here are some list of special characters in regex ([source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)). Don’t try to memorize them all. Know your limit. I can’t memorize them all in one day. I would suggest reading 3-5 per day and practice them until you nail it down. Then move on to the next set of 3-5.
+Below are some list of special characters in regex ([source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)). Don’t try to memorize them all. Know your limit. I can’t memorize them all in one day. I would suggest reading 3-5 per day and practice them until you nail it down. Then move on to the next set of 3-5.
 
 Let’s start learning. There are about 30+ special characters. They are all pretty easy. Let’s look at the first 6. The information builds up over time, so make sure we are well-acquainted with all special characters we have seen so far. We will use `.match()` function on our examples.
 
@@ -292,3 +292,32 @@ It matches for **non**-character set. Opposite of the pattern above.
 "abcde".match(/[^a-e]/)           //=> null
 "abcdefg".match(/[^a-e]/)         //=> ["f"]
 ```
+
+
+---
+
+Recall that adding `\` before simple character turns that character into special character.
+
+I have compiled a list of those simple-turned-special characters that I think are important:
+
+#### \d :
+
+It matches a digit character [0-9].
+
+```
+var re = /\d/;
+var str = "You da 1 4 me!"
+str.match(re); //=> ["1"]
+```
+
+#### \D :
+
+It matches a **non** digit character [^0-9]
+
+```
+var re = /\D/g;
+var str = "You no da 1 for me";
+str.match(re); //=> ["Y", "o", "u", " ", "n", "o", " ", "d", "a", " ", " ", " ", "m", "e"]
+```
+
+*Note: g at the end means global. Instead of returning first match, adding g will return all the matches found in the string
