@@ -320,4 +320,45 @@ var str = "You no da 1 for me";
 str.match(re); //=> ["Y", "o", "u", " ", "n", "o", " ", "d", "a", " ", " ", " ", "m", "e"]
 ```
 
-*Note: g at the end means global. Instead of returning first match, adding g will return all the matches found in the string
+*Note: g at the end means global. Instead of returning first match, adding g will return all the matches found in the string*
+
+#### \w :
+
+It matches any word character. Word includes letter, number, and underscore.
+
+```
+var re = /\w/g;
+var str = "abcABC _123";
+str.match(re); //=> ["a", "b", "c", "A", "B", "C", "_", "1", "2", "3"]
+```
+
+#### \W :
+
+It matches any **non**-word character.
+
+```
+var re = /\W/g;
+var str = "abcABC _123 !@#$%^&*()";
+str.match(re); //=> [" ", " ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
+```
+
+#### \s :
+
+It matches any whitespace character.
+
+```
+var re = /\s/g;
+var str = '\t hey \n you    space'; (there are 4 spaces between words "you" and "space")
+str.match(re); //=> ["  ", " ", " ", "
+", " ", " ", " ", " ", " "]
+```
+
+#### \S :
+
+It matches any **non**-whitespace character.
+
+```
+var re = /\S/g;
+var str = '\t hey \n you    space';
+str.match(re); //=> ["h", "e", "y", "y", "o", "u", "s", "p", "a", "c", "e"]
+```
